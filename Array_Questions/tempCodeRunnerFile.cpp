@@ -1,0 +1,1 @@
+int size=sizeof(arr)/sizeof(int);
