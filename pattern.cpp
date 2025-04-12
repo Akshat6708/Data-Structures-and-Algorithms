@@ -1,6 +1,8 @@
 #include<iostream>
+#include<vector>
 using namespace std;
-int main(){
+
+// int main(){
 
     //   1 . =>  squre pattern  
 //     int n;
@@ -67,18 +69,20 @@ int main(){
 
 // 5. pyramid pattern
 
-
-  int n;
-  cout<<"enter a number";
-  cin>>n;
-
-  for(int row=0;row<n; row++){
-    for(int spa=0; spa<n-2; spa++){
-        cout<<" ";
+//}
+int main(){
+    vector<vector<int>>matrix{
+      {1,2,3},
+      {4,5,6},
+      {7,8,9}
+    };
+    for(int row=0;row<matrix.size();row++){
+      for(int col=matrix[row].size();col>=0;col--){
+           swap(matrix[row],matrix[col]);
+        }
+      }
+      for(int i=0;i<matrix.size();i++){
+        for(int j=0;j<matrix[i].size();j++)
+        cout<<matrix[i][j]<<" ";
+      }
     }
-    for(int col=0 ; col<row ; col++){
-      cout<<"*";
-    }
-  cout<<endl;
-}
-}
