@@ -100,27 +100,30 @@ using namespace std;
 
 
 
-// int main(){
-//     int arr[]={1,2,3,3,5,8,7};
-//     int sizea=7;
-//     int brr[]={3,3,8,9,10};
-//     int sizeb=5;
-//     vector<int> ans;
-//     for(int i=0;i<sizea;i++){
-//         for(int j=0;j<sizeb;j++){
-//             if(arr[i]==brr[j]){
-//                 brr[j]=INT_MIN;
-//                 ans.push_back(arr[i]);
+//       intersection of two array 
+
+
+int main(){
+    int arr[]={1,2,3,3,5,8,7};
+    int sizea=7;
+    int brr[]={3,3,8,9,10};
+    int sizeb=5;
+    vector<int> ans;
+    for(int i=0;i<sizea;i++){
+        for(int j=0;j<sizeb;j++){
+            if(arr[i]==brr[j]){
+                brr[j]=INT_MIN;
+                ans.push_back(arr[i]);
               
-//             }
-//         }
-//     }
-//     for(int i=0;i<ans.size();i++){
-//         cout<<ans[i]<<" ";
-//     }
+            }
+        }
+    }
+    for(int i=0;i<ans.size();i++){
+        cout<<ans[i]<<" ";
+    }
 
 
-// }
+}
 
 //   Pairs
 
@@ -159,24 +162,24 @@ using namespace std;
 //      swap 0's and 1's
 
 
-int main(){
-    vector<int>arr{0,1,1,0,0,1,0,0,1,0};
-    int start=0;
-    int end=arr.size()-1;
-    for(int i=0;i<=end;i++){
-        if(arr[i]==0){
-            swap(arr[start],arr[i]);
-            start++;
-        }
+// int main(){
+//     vector<int>arr{0,1,1,0,0,1,0,0,1,0};
+//     int start=0;
+//     int end=arr.size()-1;
+//     for(int i=0;i<=end;i++){
+//         if(arr[i]==0){
+//             swap(arr[start],arr[i]);
+//             start++;
+//         }
        
-       if(arr[i]==1){
-        swap(arr[i],arr[end]);
-        end--;
-       }
+//        if(arr[i]==1){
+//         swap(arr[i],arr[end]);
+//         end--;
+//        }
       
-    }
-    for(int i=0;i<arr.size();i++){
-     cout<<arr[i]<<" ";
-    }
+//     }
+//     for(int i=0;i<arr.size();i++){
+//      cout<<arr[i]<<" ";
+//     }
 
-}
+// }
