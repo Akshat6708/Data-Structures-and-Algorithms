@@ -59,12 +59,10 @@ class animal {
    private:
    int weight;
  public:
-    int  getdata(){
-    return weight;
+    int  getdata(){  return weight;
    }
-
    void setdata( int weight){
-     this->weight=weight;
+      this->weight=weight;
    }
 };
 int main(){
@@ -73,5 +71,5 @@ int main(){
    mamal.color="black";
    mamal.setdata(35);
    cout<<mamal.getdata()<<endl;
-   
 }
+
