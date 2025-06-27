@@ -112,7 +112,7 @@ int main(){
     for(int i=0;i<sizea;i++){
         for(int j=0;j<sizeb;j++){
             if(arr[i]==brr[j]){
-                brr[j]=INT_MIN;         
+                       brr[j]=INT_MIN;         
                 ans.push_back(arr[i]);
                 
               
