@@ -16,6 +16,9 @@ class Node{
            this-> prev = NULL;
         this-> next = NULL;
      }
+     ~Node(){
+        cout<<"deleted node value is "<<this->data<<endl;
+     }
 };
 
 void print(Node* &head){
@@ -126,6 +129,63 @@ void InsertAtPosition(Node* &head , Node* &tail , int data , int position){
 
 }
 
+void deleteNode(Node* &head , Node* tail, int position ){
+
+    // if linkedc list is empty 
+    if(head == NULL){
+        cout<<" linked list is empty ";
+        return ;
+    }
+    
+//   only single node in the linked list
+    if(head->next== NULL){
+      Node* temp = head ;
+       head = NULL;
+       tail = NULL;
+     delete temp ;
+     return ;
+    }
+
+//  delete first node
+    if(position == 1){
+        Node* temp =head;
+        head= head->next;
+        head->prev=NULL;
+        temp->next=NULL ;
+        delete temp;
+        return ;
+    }
+
+// delete last node 
+int len = Findlen(head);
+if(position== len ){
+    Node* temp= tail ;
+    tail = tail->prev;
+    temp->prev= NULL;
+    tail->next = NULL;
+    delete temp;
+}
+if(position > len ){
+     cout<<"plsese enter valid node ";
+}
+
+// delete at position (middle)
+
+int i=1; 
+ Node* prevNode= head;
+while(i<position-1){
+     prevNode= prevNode->next;
+    i++;
+}
+Node* curr= prevNode->next;
+
+prevNode->next= curr->next;
+curr->next->prev= prevNode;
+curr->prev= NULL;
+curr->next= NULL;
+delete curr;
+}
+
 int main(){
    Node* first = new Node(10);
    Node* second = new Node(20);
@@ -152,6 +212,14 @@ int main(){
 // print(head);
 
 InsertAtPosition(head , tail , 99,5);
+print(head);
+cout<<endl;
+
+deleteNode(head , tail , 1);
+print(head);
+cout <<endl;
+
+deleteNode(head , tail ,3);
 print(head);
     return 0 ;
 }
