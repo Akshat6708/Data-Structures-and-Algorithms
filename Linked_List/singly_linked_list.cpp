@@ -65,6 +65,7 @@ void InsertAtTail( Node* &head,Node* &tail , int data){
     tail = newnode;
     return;
   }
+  // insert a newnode at tail
     // step 1  creat a new node
     Node* newnode= new Node(data);
 
@@ -72,7 +73,7 @@ void InsertAtTail( Node* &head,Node* &tail , int data){
     tail->next= newnode;
 
     // step 3
-    tail = newnode;
+      tail = newnode;
 
 }
 
