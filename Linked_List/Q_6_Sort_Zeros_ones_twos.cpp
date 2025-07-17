@@ -13,53 +13,53 @@ class Node{
     }
 };
 
-//  
-  //    Approch  -> 1
-  void CountZeroOneTwo(Node* &head){
-   //  step count zero , ones, and twos
-    int zeros = 0;
-    int ones = 0;
-    int twos = 0;
+ 
+  //   Approch  -> 1
+//   void CountZeroOneTwo(Node* &head){
+//    //  step count zero , ones, and twos
+//     int zeros = 0;
+//     int ones = 0;
+//     int twos = 0;
 
-    Node* temp =head;
-    while(temp != NULL){
-        if(temp->data == 0){
-            zeros++;
-        }
-        else if( temp -> data == 1){
-            ones++ ;
-        }
-        else if(temp->data == 2){
-            twos++;
-        }
-    temp = temp->next;
-    }
+//     Node* temp =head;
+//     while(temp != NULL){
+//         if(temp->data == 0){
+//             zeros++;
+//         }
+//         else if( temp -> data == 1){
+//             ones++ ;
+//         }
+//         else if(temp->data == 2){
+//             twos++;
+//         }
+//     temp = temp->next;
+//     }
    
-    // step :2 replace the value 
+//     // step :2 replace the value 
 
-    temp =head;
-    // replace by 0 
-    while(zeros--){
-        temp->data = 0;
-        temp = temp->next;
-    }
-    // replace by 1 
+//     temp =head;
+//     // replace by 0 
+//     while(zeros--){
+//         temp->data = 0;
+//         temp = temp->next;
+//     }
+//     // replace by 1 
     
-     while(ones--){
-        temp->data = 1;
-        temp = temp->next;
+//      while(ones--){
+//         temp->data = 1;
+//         temp = temp->next;
 
-    }
+//     }
 
-    // replace by 2 
-    while(twos--){
-        temp->data = 2;
-        temp = temp->next;
+//     // replace by 2 
+//     while(twos--){
+//         temp->data = 2;
+//         temp = temp->next;
 
-    }
+//     }
 
 
-  }
+//   }
 
   //   Approch -> 2 
   // without data replacement 
